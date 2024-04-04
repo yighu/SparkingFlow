@@ -36,6 +36,9 @@ docker-compose up -d --build
 ```
 This command will start the necessary services defined in your docker-compose.yml, such as Airflow webserver, scheduler, Spark master, and worker containers.
 
+setup local venv
+pip install "apache-airflow==2.2.3" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.2.3/constraints-no-providers-3.9.txt"  apache-airflow-providers-apache-spark pyspark
+
 ## Directory Structure for Jobs
 Ensure your Spark job files are placed in the following directories and are accessible to the Airflow container:
 
